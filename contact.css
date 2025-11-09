@@ -28,7 +28,7 @@ body, button, input {
 
 .screen {
   position: relative;
-  background: #666565;
+  background: linear-gradient(135deg, #123 0%, #246 100%);
   border-radius: 15px;
 }
 
@@ -49,7 +49,7 @@ body, button, input {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  background: #4d4d4f;
+  background: linear-gradient(90deg, #68a 0%, #5a8 100%);
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -109,7 +109,7 @@ body, button, input {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: #345;
+  color: #adf;
   font-size: 26px;
 }
 
@@ -121,13 +121,13 @@ body, button, input {
   bottom: -10px;
   width: 40px;
   height: 4px;
-  background: #345;
+  background: #68a;
 }
 
 .app-contact {
   margin-top: auto;
   font-size: 8px;
-  color: #424242;
+  color: #85c6f6;
 }
 
 .app-form-group {
@@ -148,8 +148,8 @@ body, button, input {
   padding: 10px 0;
   background: none;
   border: none;
-  border-bottom: 1px solid #080808;
-  color: #ddd;
+  border-bottom: 1px solid #68a;
+  color: #eee;
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
@@ -157,24 +157,28 @@ body, button, input {
 }
 
 .app-form-control::placeholder {
-  color: #ddd;
+  color: #9ab;
 }
 
 .app-form-control:focus {
-  border-bottom-color: #ddd;
+  border-bottom-color: #adf;
 }
 
 .app-form-button {
-  background: none;
+  background: linear-gradient(45deg, #68a 0%, #5a8 100%);
   border: none;
-  color: #345;
+  color: #fff;
   font-size: 14px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 5px;
   cursor: pointer;
   outline: none;
+  transition: background 0.3s ease;
 }
 
 .app-form-button:hover {
-  color: #345;
+  background: linear-gradient(45deg, #5a8 0%, #4a7 100%);
 }
 
 .credits {
@@ -182,7 +186,7 @@ body, button, input {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  color: #ffa4bd;
+  color: #adf;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
   font-weight: normal;
@@ -191,7 +195,7 @@ body, button, input {
 .credits-link {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: #85c6f6;
   font-weight: bold;
   text-decoration: none;
 }
