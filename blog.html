@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blog-style.css">
     <link rel="stylesheet" href="styles.css">
     <title>Blog</title>
 </head>
+
 <body>
     <div id="header-placeholder"></div>
 
     <div class="content">
-        <div class="blog-card spring-fever">
-            <div class="title-content">
-                <h3>SPRING FEVER</h3>
-                <hr />
-                <div class="intro">Yllamco laboris nisi ut aliquip ex ea commodo.</div>
-            </div><!-- /.title-content -->
-            <div class="card-info">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. 
-            </div><!-- /.card-info -->
-            <div class="utility-info">
-                <ul class="utility-list">
-                <li class="comments">12</li>
-                <li class="date">03.12.2015</li>
-                </ul>
-            </div><!-- /.utility-info -->
-            <!-- overlays -->
-            <div class="gradient-overlay"></div>
-            <div class="color-overlay"></div>
-        </div>
+        <section id="blog">
+            <h1>My Blog</h1>
+            <p>Sharing thoughts, insights, and experiences from my journey as a developer.</p>
+            <div class="blog-grid">
+                <div class="blog-item">
+                    <h3>Spring Fever: Embracing New Beginnings</h3>
+                    <p>Yllamco laboris nisi ut aliquip ex ea commodo. Discover how seasonal changes can inspire fresh perspectives in coding and life.</p>
+                    <div class="blog-meta">
+                        <span class="date">March 12, 2024</span>
+                        <span class="comments">12 comments</span>
+                    </div>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+                <div class="blog-item">
+                    <h3>Mastering React Hooks: A Deep Dive</h3>
+                    <p>Exploring the power of React Hooks for building more efficient and maintainable components. Tips and best practices included.</p>
+                    <div class="blog-meta">
+                        <span class="date">February 28, 2024</span>
+                        <span class="comments">8 comments</span>
+                    </div>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+                <div class="blog-item">
+                    <h3>The Art of Clean Code: Lessons Learned</h3>
+                    <p>Reflecting on the importance of writing readable, maintainable code and how it impacts long-term project success.</p>
+                    <div class="blog-meta">
+                        <span class="date">February 15, 2024</span>
+                        <span class="comments">15 comments</span>
+                    </div>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+                <div class="blog-item">
+                    <h3>Building Scalable APIs with Node.js</h3>
+                    <p>A comprehensive guide to designing and implementing robust APIs that can grow with your application's needs.</p>
+                    <div class="blog-meta">
+                        <span class="date">January 30, 2024</span>
+                        <span class="comments">6 comments</span>
+                    </div>
+                    <a href="#" class="blog-link">Read More</a>
+                </div>
+            </div>
+        </section>
     </div>
 
     <div id="footer-placeholder"></div>
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
