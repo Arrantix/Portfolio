@@ -126,8 +126,8 @@ code {
 
 /* Portfolio Content Styles */
 .content {
-	margin-top: 80px; /* Account for fixed header */
-	margin-bottom: 40px; /* Account for slimmer fixed footer */
+	margin-top: 80px;
+	margin-bottom: 40px;
 	padding: 20px;
 	max-width: 1200px;
 	margin-left: auto;
@@ -562,12 +562,10 @@ ul li a:hover {
 	}
 }
 
-/* Apply animations to sections */
 section {
 	animation: fadeInUp 1s ease-out;
 }
 
-/* Subtle hover effects */
 ul li a:hover {
 	color: #adf;
 	text-decoration: underline;
@@ -577,7 +575,7 @@ ul li a:hover {
 	background: #5a8;
 }
 
-/* Responsive Design */
+/* Media Queries */
 @media (max-width: 768px) {
 	.content {
 		padding: 10px;
