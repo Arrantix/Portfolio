@@ -28,7 +28,7 @@ function validateEmail(email) {
     return re.test(email);
 }
 
-// Contact form submission
+// Contact form submission using EmailJS
 function handleContactFormSubmit(event) {
     event.preventDefault();
 
@@ -47,22 +47,30 @@ function handleContactFormSubmit(event) {
         return;
     }
 
-    // Prepare email content
-    const subject = encodeURIComponent(`Contact Form Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    // Initialize EmailJS
+    emailjs.init('5YWZAq6VEsqCpg7Vy');
 
-    // Create mailto link
-    const mailtoLink = `mailto:kevinw223@web.de?subject=${subject}&body=${body}`;
+    // Prepare template parameters
+    const templateParams = {
+        name: name,
+        email: email,
+        message: message,
+        time: new Date().toLocaleString()
+    };
 
-    // Open email client
-    window.location.href = mailtoLink;
-
-    // Clear form
-    document.getElementById('name').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('message').value = '';
-
-    alert('Email client opened. Please send the email to complete the contact.');
+    // Send email
+    emailjs.send('service_8xk0ywf', 'template_6697bke', templateParams)
+        .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+            alert('Message sent successfully!');
+            // Clear form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Failed to send message. Please try again later.');
+        });
 }
 
 // Load header and footer on page load
