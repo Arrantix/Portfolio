@@ -73,6 +73,47 @@ function handleContactFormSubmit(event) {
         });
 }
 
+// Blog expand/collapse functionality
+function initBlogFunctionality() {
+    const readMoreButtons = document.querySelectorAll('.read-more');
+    const closeButtons = document.querySelectorAll('.close-btn');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const articleId = this.getAttribute('data-article');
+            const article = document.getElementById(articleId);
+
+            // Hide all other articles
+            const allArticles = document.querySelectorAll('.blog-item');
+            allArticles.forEach(item => {
+                if (item !== article) {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Expand the clicked article
+            article.classList.add('expanded');
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const articleId = this.getAttribute('data-article');
+            const article = document.getElementById(articleId);
+
+            // Collapse the article
+            article.classList.remove('expanded');
+
+            // Show all articles again
+            const allArticles = document.querySelectorAll('.blog-item');
+            allArticles.forEach(item => {
+                item.style.display = 'block';
+            });
+        });
+    });
+}
+
 // Load header and footer on page load
 document.addEventListener('DOMContentLoaded', function() {
     loadHTML('header.html', 'header-placeholder');
@@ -91,4 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', handleContactFormSubmit);
     }
+
+    // Initialize blog functionality
+    initBlogFunctionality();
 });

@@ -493,6 +493,55 @@ ul li a:hover {
 	border-color: rgba(74, 144, 226, 0.4);
 }
 
+.blog-item.expanded {
+	grid-column: 1 / -1;
+	padding: 30px;
+	text-align: left;
+}
+
+.blog-item.expanded h3 {
+	text-align: left;
+	font-size: 2.2em;
+	margin-bottom: 20px;
+}
+
+.blog-item.expanded .preview {
+	display: none;
+}
+
+.blog-item.expanded .full-content {
+	display: block;
+}
+
+.blog-item.expanded .blog-meta {
+	justify-content: flex-start;
+	margin-bottom: 20px;
+}
+
+.blog-item.expanded .blog-link {
+	display: none;
+}
+
+.blog-item.expanded .close-btn {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: #68a;
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	font-size: 1.5em;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.blog-item.expanded .close-btn:hover {
+	background: #5a8;
+}
+
 .blog-item h3 {
 	font-size: 1.8em;
 	color: #4a90e2;
@@ -504,6 +553,15 @@ ul li a:hover {
 	color: #eee;
 	margin-bottom: 15px;
 	line-height: 1.5;
+}
+
+.full-content {
+	display: none;
+}
+
+.full-content p {
+	text-align: left;
+	margin-bottom: 15px;
 }
 
 .blog-meta {
@@ -523,10 +581,15 @@ ul li a:hover {
 	border-radius: 4px;
 	transition: background 0.3s ease;
 	font-size: 1.2em;
+	cursor: pointer;
 }
 
 .blog-link:hover {
 	background: #5a8;
+}
+
+.close-btn {
+	display: none;
 }
 
 /* Keyframes for animations */

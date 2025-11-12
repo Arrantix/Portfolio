@@ -17,41 +17,68 @@
             <h1> Site currently under construction!!</h1>
             <p>Sharing thoughts, insights, and experiences from my journey as a developer.</p>
             <div class="blog-grid">
-                <div class="blog-item">
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus eos dolor, modi aliquid earum facilis!</p>
+                <div class="blog-item" id="article-1">
+                    <h3>Deep Q-Learning: Revolutionizing AI Decision Making</h3>
+                    <p class="preview">Deep Q-Learning combines deep neural networks with reinforcement learning to enable AI agents to make optimal decisions in complex environments.</p>
+                    <div class="full-content">
+                        <p>Deep Q-Learning (DQN) is a breakthrough in artificial intelligence that merges deep neural networks with Q-learning, a reinforcement learning technique. This approach allows AI agents to learn optimal decision-making strategies through trial and error, even in environments with high-dimensional state spaces.</p>
+                        <p>In my portfolio project, I've implemented DQN to create an AI that plays games like Tetris and Checkers, demonstrating how this algorithm can master complex strategies. The key innovation is the use of experience replay and target networks to stabilize learning, making it possible for AI to achieve superhuman performance in various tasks.</p>
+                        <p>Applications of Deep Q-Learning extend beyond gaming to areas like autonomous driving, robotics, and financial trading, where making sequential decisions under uncertainty is crucial.</p>
+                    </div>
                     <div class="blog-meta">
                         <span class="date">March 12, 2024</span>
                         <span class="comments">12 comments</span>
                     </div>
-                    <a href="#" class="blog-link">Read More</a>
+                    <a href="#" class="blog-link read-more" data-article="article-1">Read More</a>
+                    <button class="close-btn" data-article="article-1">&times;</button>
                 </div>
-                <div class="blog-item">
-                    <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ipsum harum temporibus aspernatur voluptas eius laborum dicta.</p>
+                <div class="blog-item" id="article-2">
+                    <h3>Building Robust APIs: Best Practices and Implementation</h3>
+                    <p class="preview">Creating scalable and maintainable APIs requires careful consideration of design principles, security, and performance optimization.</p>
+                    <div class="full-content">
+                        <p>Application Programming Interfaces (APIs) serve as the backbone of modern web applications, enabling seamless communication between different systems and services. When designing APIs, it's crucial to follow RESTful principles, implement proper authentication and authorization, and ensure comprehensive documentation.</p>
+                        <p>In my projects, I've developed APIs for various applications, including a shop item management system and geographic data services. Key best practices include using consistent naming conventions, implementing rate limiting to prevent abuse, and providing clear error messages with appropriate HTTP status codes.</p>
+                        <p>Security is paramount, so I've incorporated JWT tokens for authentication and input validation to prevent common vulnerabilities like SQL injection and XSS attacks. Versioning APIs properly ensures backward compatibility while allowing for future enhancements.</p>
+                        <p>Performance optimization through caching, pagination, and efficient database queries ensures that APIs can handle high traffic loads without compromising user experience.</p>
+                    </div>
                     <div class="blog-meta">
                         <span class="date">February 28, 2024</span>
                         <span class="comments">8 comments</span>
                     </div>
-                    <a href="#" class="blog-link">Read More</a>
+                    <a href="#" class="blog-link read-more" data-article="article-2">Read More</a>
+                    <button class="close-btn" data-article="article-2">&times;</button>
                 </div>
-                <div class="blog-item">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur amet sequi exercitationem ipsam neque maiores!.</p>
+                <div class="blog-item" id="article-3">
+                    <h3>Coding Best Practices: Writing Maintainable and Scalable Code</h3>
+                    <p class="preview">Adopting solid coding practices ensures that software remains maintainable, scalable, and bug-free as projects grow in complexity.</p>
+                    <div class="full-content">
+                        <p>Writing clean, maintainable code is essential for long-term project success. Best practices include following consistent naming conventions, writing self-documenting code, and implementing proper error handling. Modular design with separation of concerns allows for easier testing and refactoring.</p>
+                        <p>In my portfolio, I've applied these principles across various projects, from game development to web applications. Using design patterns like MVC (Model-View-Controller) helps organize code logically, while version control with Git enables collaborative development and easy rollbacks.</p>
+                        <p>Regular code reviews, automated testing, and continuous integration pipelines ensure code quality. Documentation, both inline comments and external docs, makes it easier for other developers (or future you) to understand and modify the codebase.</p>
+                        <p>Performance considerations, such as optimizing algorithms and database queries, prevent bottlenecks as applications scale. Staying updated with language features and frameworks keeps code modern and efficient.</p>
+                    </div>
                     <div class="blog-meta">
                         <span class="date">February 15, 2024</span>
                         <span class="comments">15 comments</span>
                     </div>
-                    <a href="#" class="blog-link">Read More</a>
+                    <a href="#" class="blog-link read-more" data-article="article-3">Read More</a>
+                    <button class="close-btn" data-article="article-3">&times;</button>
                 </div>
-                <div class="blog-item">
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, impedit!</p>
+                <div class="blog-item" id="article-4">
+                    <h3>Responsive Web Design: Creating Seamless User Experiences</h3>
+                    <p class="preview">Responsive design ensures websites look and function perfectly across all devices, from mobile phones to desktop computers.</p>
+                    <div class="full-content">
+                        <p>Responsive web design has become essential in today's multi-device world. Using flexible layouts, media queries, and fluid images, websites can adapt to different screen sizes and orientations seamlessly. This approach improves user experience and SEO rankings.</p>
+                        <p>In my portfolio projects, I've implemented responsive designs using CSS Grid and Flexbox, ensuring that complex layouts work well on both mobile and desktop. Mobile-first design philosophy guides the development process, starting with the smallest screens and progressively enhancing for larger displays.</p>
+                        <p>Key techniques include using relative units like percentages and ems instead of fixed pixels, implementing touch-friendly navigation for mobile users, and optimizing images for faster loading times. Testing across various devices and browsers ensures consistent performance.</p>
+                        <p>Accessibility considerations, such as proper contrast ratios and keyboard navigation, are integrated into responsive designs to make websites usable for everyone, regardless of device or ability.</p>
+                    </div>
                     <div class="blog-meta">
                         <span class="date">January 30, 2024</span>
                         <span class="comments">6 comments</span>
                     </div>
-                    <a href="#" class="blog-link">Read More</a>
+                    <a href="#" class="blog-link read-more" data-article="article-4">Read More</a>
+                    <button class="close-btn" data-article="article-4">&times;</button>
                 </div>
             </div>
         </section>
