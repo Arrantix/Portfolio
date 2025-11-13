@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kevin Weidner's portfolio - Full-stack developer specializing in modern web technologies, AI/ML, and innovative solutions">
+    <meta name="keywords" content="full-stack developer, web development, AI, machine learning, portfolio, React, Node.js, Python">
+    <meta name="author" content="Kevin Weidner">
+    <link rel="canonical" href="https://arrantix.github.io/Portfolio/">
     <link rel="stylesheet" href="styles.css">
-    <title>My Portfolio</title>
+    <title>Kevin Weidner - Full-Stack Developer Portfolio</title>
 </head>
 
 <body>
     <div id="header-placeholder"></div>
 
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Hi, I'm Kevin Weidner</h1>
+            <p>A passionate full-stack developer ready to bring your ideas to life with clean, efficient code and innovative solutions.</p>
+            <a href="#about" class="cta-button">Explore My Work</a>
+        </div>
+    </div>
+
     <div class="content">
         <section id="about">
-            <h1>Hi, I'm Kevin Weidner</h1>
-            <p class="intro">A passionate full-stack developer ready to bring your ideas to life with clean, efficient code and innovative solutions.</p>
+            <h2>About Me</h2>
+            <p class="intro">Welcome to my digital portfolio! I'm a dedicated full-stack developer with a passion for creating exceptional digital experiences. With expertise spanning modern web technologies, I transform complex ideas into elegant, functional solutions.</p>
             <div class="skills-showcase">
                 <div class="skill-item">
                     <div class="skill-icon">💻</div>
@@ -31,6 +43,11 @@
                     <h3>Performance Focused</h3>
                     <p>Optimizing for speed, scalability, and exceptional user experience through advanced techniques</p>
                 </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🤖</div>
+                    <h3>AI & ML</h3>
+                    <p>Deep Learning, Reinforcement Learning, neural networks - intelligent solutions for complex problems</p>
+                </div>
             </div>
             <p class="cta">Currently seeking exciting opportunities to collaborate on cutting-edge projects. Let's build something amazing together!</p>
             <div class="typing-container">
@@ -39,16 +56,98 @@
             </div>
         </section>
         <section id="projects">
-            <h1>My Projects</h1>
-            <p>Here are some of my recent projects:</p>
-            <ul>
-                <li><a href="projects.html">Recent Projects</a> - A collection of some of my Projects and Experiences.</li>
-                <li><a href="demos.html">Live Demos</a> - An interactive space to look at and try some Examples.</li>
-            </ul>
+            <h2>My Projects</h2>
+            <p>Explore my portfolio of innovative projects that showcase my skills and creativity:</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/Portfolio.png" alt="Portfolio Website">
+                    <h3>Portfolio Website</h3>
+                    <p>This responsive portfolio you are currently exploring, built with modern web technologies.</p>
+                    <a href="https://github.com/Arrantix/Portfolio/" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/shoptitem.png" alt="E-commerce Platform">
+                    <h3>E-commerce Platform</h3>
+                    <p>A full-stack e-commerce solution with Angular frontend and Django backend.</p>
+                    <a href="#" class="project-link" target="">Coming Soon</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/tetris.png" alt="AI Tetris Game">
+                    <h3>AI Tetris Game</h3>
+                    <p>An AI-driven Tetris clone featuring deep Q-learning algorithms for intelligent gameplay.</p>
+                    <a href="https://github.com/Arrantix/Tetris/" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/Checkers.png" alt="AI Game Collection">
+                    <h3>AI Game Collection</h3>
+                    <p>Multiple games (Checkers, 2048, Snake) powered by deep Q-learning neural networks.</p>
+                    <a href="https://github.com/Arrantix/Game" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <img src="assets/Geokram.png" alt="Geographic Discovery Tool">
+                    <h3>Geographic Discovery Tool</h3>
+                    <p>Find the most unlikely places within a radius using advanced geographic algorithms.</p>
+                    <a href="https://github.com/Arrantix/Geokram/" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="projects.html" class="cta-button">View All Projects</a>
+            </div>
+        </section>
+        <section id="demos">
+            <h2>Live Demos</h2>
+            <p>Experience my projects firsthand through interactive live demos:</p>
+            <div class="demos-grid">
+                <div class="demo-item">
+                    <h3>AI Tetris</h3>
+                    <p>Watch an AI master Tetris using reinforcement learning algorithms.</p>
+                    <a href="https://arrantix.github.io/Tetris/" class="demo-link" target="_blank">Play Demo</a>
+                </div>
+                <div class="demo-item">
+                    <h3>Geographic Discovery</h3>
+                    <p>Discover the most unlikely locations within any radius on Earth.</p>
+                    <a href="https://arrantix.github.io/Geokram/" class="demo-link" target="_blank">Try Demo</a>
+                </div>
+                <div class="demo-item">
+                    <h3>Coming Soon</h3>
+                    <p>More interactive demos are in development. Stay tuned!</p>
+                    <a href="#" class="demo-link">Coming Soon</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="demos.html" class="cta-button">View All Demos</a>
+            </div>
+        </section>
+        <section id="blog-preview">
+            <h2>Latest Insights</h2>
+            <p>Sharing knowledge and experiences from my development journey:</p>
+            <div class="blog-grid">
+                <div class="blog-item">
+                    <h3>Deep Q-Learning: Revolutionizing AI</h3>
+                    <p>Exploring how deep neural networks combined with reinforcement learning enable AI to master complex decision-making tasks.</p>
+                    <a href="blog.html" class="blog-link">Read Blog</a>
+                </div>
+                <div class="blog-item">
+                    <h3>Building Scalable APIs</h3>
+                    <p>Best practices for creating robust, maintainable APIs that power modern web applications.</p>
+                    <a href="blog.html" class="blog-link">Read Blog</a>
+                </div>
+                <div class="blog-item">
+                    <h3>Clean Code Principles</h3>
+                    <p>Writing maintainable, scalable code that stands the test of time and collaboration.</p>
+                    <a href="blog.html" class="blog-link">Read Blog</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="blog.html" class="cta-button">Read Full Blog</a>
+            </div>
         </section>
         <section id="contact">
-            <h1>Contact</h1>
-            <p>Get in touch with me via <a href="contact.html">contact form</a>.</p>
+            <h2>Get In Touch</h2>
+            <p>Ready to collaborate on your next project? I'd love to hear from you!</p>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="contact.html" class="cta-button">Contact Me</a>
+            </div>
         </section>
     </div>
 
