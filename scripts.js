@@ -423,6 +423,76 @@ function getLanguageCookie() {
     return null;
 }
 
+// Initialize show all functionality
+function initShowAllFunctionality() {
+    const containers = document.querySelectorAll('.show-all-container');
+
+    containers.forEach(container => {
+        const sectionName = container.getAttribute('data-section');
+        const section = document.getElementById(sectionName);
+        if (!section) return;
+
+        // Determine grid class based on section
+        let gridClass;
+        if (sectionName === 'projects') {
+            gridClass = 'projects-grid';
+        } else if (sectionName === 'demos') {
+            gridClass = 'demos-grid';
+        } else if (sectionName === 'blog-preview') {
+            gridClass = 'blog-grid';
+        }
+
+        const grid = section.querySelector(`.${gridClass}`);
+        if (!grid) return;
+
+        const items = grid.children;
+        const totalItems = items.length;
+        const maxVisible = 6;
+
+        // Only show button if there are more than 6 items
+        if (totalItems <= maxVisible) {
+            return;
+        }
+
+        // Hide items beyond the first 6
+        for (let i = maxVisible; i < totalItems; i++) {
+            items[i].style.display = 'none';
+        }
+
+        // Create show all button
+        const currentLang = document.documentElement.lang;
+        const showAllText = currentLang === 'de' ? 'Alle anzeigen' : 'Show All';
+        const showLessText = currentLang === 'de' ? 'Weniger anzeigen' : 'Show Less';
+
+        const button = document.createElement('button');
+        button.className = 'cta-button show-all-btn';
+        button.textContent = showAllText;
+        button.setAttribute('data-expanded', 'false');
+
+        button.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('data-expanded') === 'true';
+
+            if (isExpanded) {
+                // Collapse: hide items beyond 6
+                for (let i = maxVisible; i < totalItems; i++) {
+                    items[i].style.display = 'none';
+                }
+                this.textContent = showAllText;
+                this.setAttribute('data-expanded', 'false');
+            } else {
+                // Expand: show all items
+                for (let i = maxVisible; i < totalItems; i++) {
+                    items[i].style.display = 'block';
+                }
+                this.textContent = showLessText;
+                this.setAttribute('data-expanded', 'true');
+            }
+        });
+
+        container.appendChild(button);
+    });
+}
+
 // Load header and footer on page load
 document.addEventListener('DOMContentLoaded', function() {
     const currentLang = document.documentElement.lang;
@@ -451,4 +521,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize blog functionality
     initBlogFunctionality();
+
+    // Initialize show all functionality
+    initShowAllFunctionality();
 });
