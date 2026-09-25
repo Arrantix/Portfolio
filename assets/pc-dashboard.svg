@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">PC Dashboard</title>
+  <desc id="desc">Stilisierte Ansicht der Windows-Anwendung mit Bereichen für Prozessor, Arbeitsspeicher, Grafik und Datenträger.</desc>
+  <defs>
+    <linearGradient id="screen" x2="0" y2="1">
+      <stop stop-color="#273136"/>
+      <stop offset="1" stop-color="#1c2529"/>
+    </linearGradient>
+    <linearGradient id="bar" x2="1" y2="0">
+      <stop stop-color="#2b7e70"/>
+      <stop offset="1" stop-color="#53e4c1"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="1196" height="756" rx="17" fill="url(#screen)" stroke="#6c8685" stroke-width="4"/>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="48" y="38" width="47" height="47" rx="8" fill="#49e2c1"/>
+    <text x="71.5" y="68" text-anchor="middle" font-size="19" font-weight="800" fill="#142024">PC</text>
+    <text x="112" y="59" font-size="23" font-weight="700" fill="#eef5f4">PC DASHBOARD</text>
+    <text x="113" y="79" font-size="11" letter-spacing="2" fill="#96abaa">REAL-TIME SYSTEM MONITOR</text>
+    <rect x="931" y="46" width="114" height="29" rx="4" fill="#1b2a28" stroke="#335047"/>
+    <circle cx="948" cy="60.5" r="4" fill="#49e2c1"/>
+    <text x="960" y="65" font-size="12" letter-spacing="1" fill="#a5d6c8">LIVE · LOCAL</text>
+    <path d="M1091 60h18m21-8v16h17V52z" fill="none" stroke="#a4b6b6" stroke-width="2"/>
+    <path d="m1166 53 13 13m0-13-13 13" stroke="#a4b6b6" stroke-width="2"/>
+    <text x="48" y="141" font-size="15" font-weight="600" fill="#eef5f4">Overview</text>
+    <text x="169" y="141" font-size="15" fill="#91a3a4">Network</text>
+    <path d="M48 153h67" stroke="#49e2c1" stroke-width="3"/>
+    <path d="M48 153h1104" stroke="#3d4c51"/>
+    <text x="48" y="201" font-size="13" font-weight="700" letter-spacing="2" fill="#8fa6a5">PROCESSOR</text>
+    <path d="M48 214h1104" stroke="#3d4c51"/>
+    <text x="48" y="259" font-size="14" fill="#a1b2b3">Overall utilization</text>
+    <text x="1151" y="269" text-anchor="end" font-size="48" font-weight="700" fill="#f2f8f7">—</text>
+    <text x="48" y="297" font-size="12" fill="#91a3a4">Physical cores  ·  —</text>
+    <text x="270" y="297" font-size="12" fill="#91a3a4">Logical threads  ·  —</text>
+    <text x="495" y="297" font-size="12" fill="#91a3a4">Frequency  ·  —</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#9fb2b1">
+      <text x="48" y="342">CORE 01</text><text x="610" y="342">CORE 02</text>
+      <text x="48" y="380">CORE 03</text><text x="610" y="380">CORE 04</text>
+      <text x="48" y="418">CORE 05</text><text x="610" y="418">CORE 06</text>
+    </g>
+    <g fill="#33454a">
+      <rect x="123" y="331" width="397" height="7" rx="3"/><rect x="685" y="331" width="397" height="7" rx="3"/>
+      <rect x="123" y="369" width="397" height="7" rx="3"/><rect x="685" y="369" width="397" height="7" rx="3"/>
+      <rect x="123" y="407" width="397" height="7" rx="3"/><rect x="685" y="407" width="397" height="7" rx="3"/>
+    </g>
+    <g fill="url(#bar)">
+      <rect x="123" y="331" width="155" height="7" rx="3"/><rect x="685" y="331" width="91" height="7" rx="3"/>
+      <rect x="123" y="369" width="225" height="7" rx="3"/><rect x="685" y="369" width="169" height="7" rx="3"/>
+      <rect x="123" y="407" width="127" height="7" rx="3"/><rect x="685" y="407" width="192" height="7" rx="3"/>
+    </g>
+    <text x="48" y="452" font-size="11" fill="#91a3a4">Per-core activity</text>
+    <text x="48" y="511" font-size="13" font-weight="700" letter-spacing="2" fill="#8fa6a5">MEMORY</text>
+    <text x="610" y="511" font-size="13" font-weight="700" letter-spacing="2" fill="#8fa6a5">GRAPHICS</text>
+    <path d="M48 524h490m72 0h542" stroke="#3d4c51"/>
+    <text x="48" y="555" font-size="14" fill="#a1b2b3">In use</text>
+    <text x="538" y="564" text-anchor="end" font-size="30" fill="#64e4c5">—</text>
+    <rect x="48" y="583" width="490" height="8" rx="4" fill="#33454a"/>
+    <rect x="48" y="583" width="201" height="8" rx="4" fill="url(#bar)"/>
+    <text x="610" y="555" font-size="14" fill="#a1b2b3">GPU utilization</text>
+    <text x="1152" y="564" text-anchor="end" font-size="30" fill="#64e4c5">—</text>
+    <rect x="610" y="583" width="542" height="8" rx="4" fill="#33454a"/>
+    <rect x="610" y="583" width="155" height="8" rx="4" fill="url(#bar)"/>
+    <text x="48" y="648" font-size="13" font-weight="700" letter-spacing="2" fill="#8fa6a5">STORAGE</text>
+    <text x="610" y="648" font-size="13" font-weight="700" letter-spacing="2" fill="#8fa6a5">THIS DEVICE</text>
+    <path d="M48 661h490m72 0h542" stroke="#3d4c51"/>
+    <path d="M48 703h490m72 0h542" stroke="#344146" stroke-dasharray="5 6"/>
+  </g>
+</svg>

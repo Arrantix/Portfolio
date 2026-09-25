@@ -48,9 +48,9 @@ test('contact forms cannot submit personal data through an unenhanced GET reques
   for (const page of ['contact.html', 'contact-de.html']) {
     const html = readFileSync(path.join(root, page), 'utf8');
     assert.match(html, /<fieldset disabled>/);
-    assert.match(html, /<noscript>/);
+    assert.match(html, /<noscript\b/);
     assert.match(html, /href="mailto:weidner.k@protonmail.com"/);
-    assert.match(html, /id="form-status" role="status"/);
+    assert.match(html, /<p[^>]*id="form-status"[^>]*role="status"/);
   }
 });
 
@@ -60,5 +60,41 @@ test('existing homepage section links remain usable', () => {
     for (const id of ['about', 'projects', 'demos', 'blog-preview', 'contact']) {
       assert.ok(html.includes(`id="${id}"`), `${page}: lost legacy anchor ${id}`);
     }
+  }
+});
+
+test('PC Dashboard leads both languages and offers a Windows download without entering the browser demos', () => {
+  for (const suffix of ['', '-de']) {
+    const home = readFileSync(path.join(root, `index${suffix}.html`), 'utf8');
+    const projects = readFileSync(path.join(root, `projects${suffix}.html`), 'utf8');
+    const demos = readFileSync(path.join(root, `demos${suffix}.html`), 'utf8');
+    assert.match(home, new RegExp(`class="hero-experiment hero-dashboard"\\s+href="projects${suffix}\\.html#pc-dashboard"`));
+    assert.ok(home.indexOf('visual-pc-dashboard') < home.indexOf('visual-tetris'));
+    assert.ok(projects.indexOf('id="pc-dashboard"') < projects.indexOf('id="tetris"'));
+    assert.match(projects, /releases\/latest\/download\/PC-Dashboard\.exe/);
+    assert.doesNotMatch(demos, /visual-pc-dashboard/);
+  }
+});
+
+test('notes connect public project evidence and retain localized articles', () => {
+  for (const [suffix, title] of [['', 'A bug fix needs a counterexample.'], ['-de', 'Ein Bugfix braucht ein Gegenbeispiel.']]) {
+    const html = readFileSync(path.join(root, `blog${suffix}.html`), 'utf8');
+    assert.equal((html.match(/class="journal-article"/g) || []).length, 5);
+    assert.ok(html.includes(title));
+    assert.ok(html.includes(`href="projects${suffix}.html#tetris"`));
+    assert.ok(html.includes(`href="projects${suffix}.html#pc-dashboard"`));
+  }
+});
+
+test('early course work is linked as prototypes and internship notes are present', () => {
+  for (const [suffix, internshipText] of [['', 'During my internship'], ['-de', 'Während meines Praktikums']]) {
+    const projects = readFileSync(path.join(root, `projects${suffix}.html`), 'utf8');
+    const blog = readFileSync(path.join(root, `blog${suffix}.html`), 'utf8');
+    const home = readFileSync(path.join(root, `index${suffix}.html`), 'utf8');
+    assert.match(projects, /Arrantix\/MovieCoach-Prototype\//);
+    assert.match(projects, /Arrantix\/TradeIt\//);
+    assert.match(projects, /Expectimax/);
+    assert.equal(blog.split(internshipText).length - 1, 2);
+    assert.match(home, suffix ? /Im Praktikum habe ich/ : /During my internship/);
   }
 });

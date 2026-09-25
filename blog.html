@@ -1,22 +1,283 @@
 <!doctype html>
-<html lang="en"><head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Notes — Kevin Weidner</title><meta name="description" content="Notes on learning games, web development, and the decisions in between."><meta name="theme-color" content="#171a17">
-  <link rel="canonical" href="https://arrantix.github.io/Portfolio/blog.html">
-  <link rel="alternate" hreflang="de" href="https://arrantix.github.io/Portfolio/blog-de.html"><link rel="alternate" hreflang="en" href="https://arrantix.github.io/Portfolio/blog.html">
-  <meta property="og:title" content="Notes — Kevin Weidner"><meta property="og:description" content="Notes on learning games, web development, and the decisions in between."><meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="preload" href="assets/fonts/SpaceGrotesk-Variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js" defer></script>
-</head><body class="page-blog"><a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header" id="top"><div class="shell header-inner">
-    <a class="brand" href="index.html" aria-label="Kevin Weidner — Home"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M0 0h10v10H0zm12 0h10v10H12zm0 12h10v10H12z"/></svg><span>Kevin Weidner<span class="brand-alias"> / Arrantix</span></span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" data-open-label="Menu" data-close-label="Close" hidden>Menu<span aria-hidden="true">＋</span></button>
-    <nav class="navigation" id="navigation" aria-label="Main navigation">
-      <a href="projects.html">Projects</a>
-      <a href="index.html#about">About</a>
-      <a href="blog.html" aria-current="page">Notes</a>
-      <a class="nav-contact" href="contact.html">Contact<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a>
-      <div class="language-switch" aria-label="Language"><a href="blog-de.html" lang="de" hreflang="de" aria-label="Deutsch">DE</a><span aria-hidden="true">/</span><a href="blog.html" lang="en" hreflang="en" aria-label="English" aria-current="true">EN</a></div>
-    </nav>
-  </div></header><main id="main"><div class="page-intro shell"><p class="eyebrow">03 / Notes</p><h1>Build. Learn.<br><span>Write it down.</span></h1><p class="page-intro-text">Notes on learning games, web development, and the decisions in between.</p></div><div class="shell journal"><nav class="journal-index" aria-label="Notes index"><a href="#article-1"><span class="mono">01</span>AI & games</a><a href="#article-2"><span class="mono">02</span>Backend</a><a href="#article-3"><span class="mono">03</span>Practice</a><a href="#article-4"><span class="mono">04</span>Frontend</a></nav><div class="journal-articles"><article class="journal-article" id="article-1"><p class="eyebrow">01 / AI & games</p><h2>Turning a game into a learning task.</h2><p>A game has rules, possible moves, and an outcome. In reinforcement learning, it can be described as a sequence of states, actions, and rewards. An agent tries actions and uses feedback to inform future decisions.</p><p>In Deep Q-Learning, a neural network estimates the value of possible actions. Experience replay reuses previous experiences; a separate target network can help stabilize training. Results depend in part on how the state and reward are defined.</p><p>Tetris and checkers make these questions tangible: What information does the agent need? What do we reward? And is it learning the behavior we actually intended?</p><a class="text-link" href="projects.html#tetris">Explore the Tetris project<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a></article><article class="journal-article" id="article-2"><p class="eyebrow">02 / Backend</p><h2>An API needs a clear agreement.</h2><p>An interface connects two parts of an application. For them to work together, inputs, responses, and possible errors need clear definitions.</p><p>Useful starting points include unambiguous field names, meaningful status codes, and validation where data enters the system. A client should be able to tell an invalid input apart from an unavailable service.</p><p>Authentication, permissions, and request limits belong in the planning of a public API. The appropriate measures depend on the data and the specific use case.</p></article><article class="journal-article" id="article-3"><p class="eyebrow">03 / Practice</p><h2>Code for the next reader.</h2><p>Code is not just executed. It is read, changed, and sometimes revisited months later. Good names and small, well-defined responsibilities help with that.</p><p>Tests are especially useful at boundaries: unexpected inputs, empty results, and external service failures. They capture the behavior that is intended.</p><p>An abstraction earns its place when it makes an existing problem easier to understand. For a possibility that may arise later, a direct solution is often the better starting point.</p></article><article class="journal-article" id="article-4"><p class="eyebrow">04 / Frontend</p><h2>A layout needs room to adapt.</h2><p>A responsive layout adapts to its content and the available space. Simply making everything smaller on a small screen is not enough.</p><p>Columns can stack, text needs room to wrap, and navigation needs to stay reachable. Long German words make a useful practical test.</p><p>Readability, keyboard access, and reduced motion are part of the design. They are best checked with real content in the browser, rather than left until the end.</p></article></div></div><section class="contact-cta shell" id="contact" aria-labelledby="contact-heading"><div><p class="eyebrow">A good place to start</p><h2 id="contact-heading">Have an idea?<br><span>Tell me about it.</span></h2></div><a class="contact-circle" href="contact.html" aria-label="Contact"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a><div class="cta-bottom"><a class="email-link" href="mailto:weidner.k@protonmail.com">weidner.k@protonmail.com</a><span class="mono">Germany · DE / EN</span></div></section></main><footer class="site-footer"><div class="shell footer-inner"><a class="footer-brand" href="index.html"><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M0 0h10v10H0zm12 0h10v10H12zm0 12h10v10H12z"/></svg>Kevin Weidner</a><p>Made with curiosity.</p><div class="footer-links"><a class="text-link" href="https://github.com/Arrantix" target="_blank" rel="noopener noreferrer">GitHub<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a><a class="text-link" href="https://www.linkedin.com/in/kevin-weidner-266561329/" target="_blank" rel="noopener noreferrer">LinkedIn<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg></a><a class="text-link" href="#top">Back to top<span aria-hidden="true">↑</span></a></div></div></footer></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notes — Kevin Weidner</title>
+    <meta
+      name="description"
+      content="Lessons from my own projects and internship, including tests and technical decisions." />
+    <meta name="theme-color" content="#171a17" />
+    <link
+      rel="canonical"
+      href="https://arrantix.github.io/Portfolio/blog.html" />
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="https://arrantix.github.io/Portfolio/blog-de.html" />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://arrantix.github.io/Portfolio/blog.html" />
+    <meta property="og:title" content="Notes — Kevin Weidner" />
+    <meta
+      property="og:description"
+      content="Lessons from my own projects and internship, including tests and technical decisions." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/SpaceGrotesk-Variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body class="page-blog">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Kevin Weidner — Home"
+          ><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M0 0h10v10H0zm12 0h10v10H12zm0 12h10v10H12z" /></svg
+          ><span
+            >Kevin Weidner<span class="brand-alias"> / Arrantix</span></span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-open-label="Menu"
+          data-close-label="Close"
+          hidden>
+          Menu<span aria-hidden="true">＋</span>
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Main navigation">
+          <a href="projects.html">Projects</a>
+          <a href="index.html#about">About</a>
+          <a href="blog.html" aria-current="page">Notes</a>
+          <a class="nav-contact" href="contact.html"
+            >Contact<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 19 19 5M5 5h14v14"
+                stroke="currentColor"
+                stroke-width="1.5" /></svg
+          ></a>
+          <div class="language-switch" aria-label="Language">
+            <a href="blog-de.html" lang="de" hreflang="de" aria-label="Deutsch"
+              >DE</a
+            ><span aria-hidden="true">/</span
+            ><a
+              href="blog.html"
+              lang="en"
+              hreflang="en"
+              aria-label="English"
+              aria-current="true"
+              >EN</a
+            >
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="page-intro shell">
+        <p class="eyebrow">03 / Notes</p>
+        <h1>Build. Learn.<br /><span>Write it down.</span></h1>
+        <p class="page-intro-text">
+          Lessons from my own projects and internship, including tests and
+          technical decisions.
+        </p>
+      </div>
+      <div class="shell journal">
+        <nav class="journal-index" aria-label="Notes index">
+          <a href="#article-1"><span class="mono">01</span>AI & games</a
+          ><a href="#article-2"><span class="mono">02</span>Delivery</a
+          ><a href="#article-3"><span class="mono">03</span>Correctness</a
+          ><a href="#article-4"><span class="mono">04</span>Automation</a
+          ><a href="#article-5"><span class="mono">05</span>Frontend</a>
+        </nav>
+        <div class="journal-articles">
+          <article class="journal-article" id="article-1">
+            <p class="eyebrow">01 / AI & games</p>
+            <h2>Turning a game into a learning task.</h2>
+            <p>
+              A game has rules, possible moves, and an outcome. In reinforcement
+              learning, it can be described as a sequence of states, actions,
+              and rewards. An agent tries actions and uses feedback to inform
+              future decisions.
+            </p>
+            <p>
+              In Deep Q-Learning, a neural network estimates the value of
+              possible actions. Experience replay reuses previous experiences; a
+              separate target network can help stabilize training. Results
+              depend in part on how the state and reward are defined.
+            </p>
+            <p>
+              Tetris and checkers make these questions tangible: What
+              information does the agent need? What do we reward? And is it
+              learning the behavior we actually intended?
+            </p>
+            <a class="text-link" href="projects.html#tetris"
+              >Explore the Tetris project<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true">
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5" /></svg
+            ></a>
+          </article>
+          <article class="journal-article" id="article-2">
+            <p class="eyebrow">02 / Delivery</p>
+            <h2>An app has to reach its users.</h2>
+            <p>
+              For PC Dashboard, the Windows executable is part of the product.
+              It bundles the application so it can run without a local Python
+              installation.
+            </p>
+            <p>
+              GitHub Actions checks the Windows build on code changes and
+              creates an executable with a SHA-256 checksum for releases. That
+              keeps source code, build, and download connected.
+            </p>
+            <p>
+              I state the limits as clearly as the features: the executable is
+              not signed, and GPU readings depend on available NVIDIA telemetry.
+              Good delivery includes these details.
+            </p>
+            <a class="text-link" href="projects.html#pc-dashboard"
+              >Explore PC Dashboard<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true">
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5" /></svg
+            ></a>
+          </article>
+          <article class="journal-article" id="article-3">
+            <p class="eyebrow">03 / Correctness</p>
+            <h2>A bug fix needs a counterexample.</h2>
+            <p>
+              During my internship, I investigated defects in a larger Python
+              codebase where different plausible calculations produced
+              conflicting results. The first step was to make the intended rule
+              explicit.
+            </p>
+            <p>
+              I reproduced the edge case, corrected the calculation, and added
+              regression tests. The tests needed to capture the rule rather than
+              merely repeat the implementation.
+            </p>
+            <p>
+              A fix is convincing when you can explain why the old case failed
+              and what prevents it from returning.
+            </p>
+          </article>
+          <article class="journal-article" id="article-4">
+            <p class="eyebrow">04 / Automation</p>
+            <h2>Automation needs a stop condition.</h2>
+            <p>
+              During my internship, I worked on automated decisions in team
+              software. The underlying data can change state before the action
+              runs; the process may then complete technically while producing
+              the wrong outcome.
+            </p>
+            <p>
+              I checked those state changes at the decision point, moved
+              hard-coded rules into configuration, and tested the boundaries.
+            </p>
+            <p>
+              A safe exit is part of the feature: when the prerequisites no
+              longer hold, the system should visibly do nothing.
+            </p>
+          </article>
+          <article class="journal-article" id="article-5">
+            <p class="eyebrow">05 / Frontend</p>
+            <h2>A layout needs room to adapt.</h2>
+            <p>
+              A responsive layout adapts to its content and the available space.
+              Simply making everything smaller on a small screen is not enough.
+            </p>
+            <p>
+              Columns can stack, text needs room to wrap, and navigation needs
+              to stay reachable. Long German words make a useful practical test.
+            </p>
+            <p>
+              Readability, keyboard access, and reduced motion are part of the
+              design. They are best checked with real content in the browser,
+              rather than left until the end.
+            </p>
+          </article>
+        </div>
+      </div>
+      <section
+        class="contact-cta shell"
+        id="contact"
+        aria-labelledby="contact-heading">
+        <div>
+          <p class="eyebrow">A good place to start</p>
+          <h2 id="contact-heading">
+            Have an idea?<br /><span>Tell me about it.</span>
+          </h2>
+        </div>
+        <a class="contact-circle" href="contact.html" aria-label="Contact"
+          ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M5 19 19 5M5 5h14v14"
+              stroke="currentColor"
+              stroke-width="1.5" /></svg
+        ></a>
+        <div class="cta-bottom">
+          <a class="email-link" href="mailto:weidner.k@protonmail.com"
+            >weidner.k@protonmail.com</a
+          ><span class="mono">Germany · DE / EN</span>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="footer-brand" href="index.html"
+          ><svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M0 0h10v10H0zm12 0h10v10H12zm0 12h10v10H12z" /></svg
+          >Kevin Weidner</a
+        >
+        <p>Made with curiosity.</p>
+        <div class="footer-links">
+          <a
+            class="text-link"
+            href="https://github.com/Arrantix"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 19 19 5M5 5h14v14"
+                stroke="currentColor"
+                stroke-width="1.5" /></svg></a
+          ><a
+            class="text-link"
+            href="https://www.linkedin.com/in/kevin-weidner-266561329/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn<svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M5 19 19 5M5 5h14v14"
+                stroke="currentColor"
+                stroke-width="1.5" /></svg></a
+          ><a class="text-link" href="#top"
+            >Back to top<span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

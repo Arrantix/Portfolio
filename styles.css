@@ -113,6 +113,14 @@ h1 span, .contact-cta h2 span, .about-section h2 span { color: var(--accent); }
 .project-visual img { position: absolute; object-fit: contain; width: calc(100% - 60px); height: calc(100% - 80px); transition: transform .35s ease; }
 .project-image-link:hover img { transform: scale(1.025); }
 .visual-index { position: absolute; top: 15px; left: 18px; color: #31382a; z-index: 1; font-size: 10px; letter-spacing: .07em; }
+.hero-dashboard .experiment-art { background-color: #172926; background-image: linear-gradient(#6fd5bd12 1px, transparent 1px), linear-gradient(90deg, #6fd5bd12 1px, transparent 1px); }
+.hero-dashboard .experiment-art img { width: min(100%, 425px); height: auto; aspect-ratio: 1200 / 760; border: 1px solid #8fbeb354; border-radius: 6px; box-shadow: 0 24px 50px #071611a6; transform: rotate(-3deg); }
+.hero-dashboard:hover .experiment-art img { transform: rotate(-3deg) translateY(-4px); }
+.dashboard-orbit { position: absolute; width: 210px; height: 210px; border: 1px solid #5ebda755; border-radius: 50%; }
+.orbit-one { top: -95px; right: -60px; }
+.orbit-two { bottom: -145px; left: -85px; width: 280px; height: 280px; }
+.visual-pc-dashboard { background: #9fc3b9; }
+.visual-pc-dashboard img { width: min(calc(100% - 50px), 650px); height: auto; max-height: calc(100% - 90px); filter: drop-shadow(0 22px 24px #1d4c4852); }
 .visual-tetris { background: #b9cc9c; }
 .visual-tetris img { width: auto; max-width: calc(100% - 40px); border-radius: 8px; box-shadow: 0 15px 40px #34402730; }
 .visual-geokram { background: #c9bda5; }
@@ -323,5 +331,5 @@ h1 span, .contact-cta h2 span, .about-section h2 span { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .hero-experiment:hover .experiment-art img, .project-image-link:hover img, .text-link:hover svg { transform: none; }
+  .hero-experiment:hover .experiment-art img, .hero-dashboard:hover .experiment-art img, .project-image-link:hover img, .text-link:hover svg { transform: none; }
 }

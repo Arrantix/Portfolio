@@ -39,8 +39,10 @@ provider-side domain restrictions and rate limits remain the provider's responsi
 ## Design
 
 The portfolio uses charcoal surfaces, warm white typography, a restrained lime
-accent, and real project screenshots. The small three-block identity comes from
-the game projects. Project evidence takes priority over generic skill claims.
+accent, and project visuals. The PC Dashboard preview is a stylized SVG based
+on the application interface; the other project images are screenshots. The
+small three-block identity comes from the game projects. Project evidence takes
+priority over generic skill claims.
 Space Grotesk and IBM Plex Mono are hosted locally with their OFL licenses in
 `assets/fonts/`. Motion is limited to short hover feedback and respects reduced
 motion. German and English pages share one template and have explicit routes.
