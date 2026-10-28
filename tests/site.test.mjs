@@ -5,15 +5,18 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const pages = ['index', 'projects', 'demos', 'blog', 'contact'].flatMap(name => [`${name}.html`, `${name}-de.html`]);
+const pages = ['index', 'projects', 'demos', 'blog', 'contact', 'framework'].flatMap((name) => [
+  `${name}.html`,
+  `${name}-de.html`,
+]);
 
 test('every localized page has accessible static navigation and a single main heading', () => {
   for (const page of pages) {
     const html = readFileSync(path.join(root, page), 'utf8');
     assert.equal((html.match(/<h1\b/g) || []).length, 1, page);
     assert.match(html, /<main id="main">/, page);
-    assert.match(html, /<nav class="navigation"/, page);
-    assert.match(html, /class="skip-link" href="#main"/, page);
+    assert.match(html, /<nav\s+class="navigation"/, page);
+    assert.match(html, /class="skip-link"\s+href="#main"/, page);
     assert.match(html, new RegExp(`<html lang="${page.includes('-de') ? 'de' : 'en'}"`), page);
     assert.doesNotMatch(html, /href="#"/, page);
   }
@@ -27,7 +30,11 @@ test('all local routes, fragments, and assets resolve, including both language t
       const [filename, hash] = value.split('#');
       const target = path.resolve(root, filename || page);
       assert.ok(existsSync(target), `${page}: missing ${attribute} ${value}`);
-      if (hash) assert.ok(readFileSync(target, 'utf8').includes(`id="${hash}"`), `${page}: missing anchor ${value}`);
+      if (hash)
+        assert.ok(
+          readFileSync(target, 'utf8').includes(`id="${hash}"`),
+          `${page}: missing anchor ${value}`,
+        );
     }
   }
 });
@@ -35,7 +42,8 @@ test('all local routes, fragments, and assets resolve, including both language t
 test('external new-window links are isolated and project images have intrinsic dimensions', () => {
   for (const page of pages) {
     const html = readFileSync(path.join(root, page), 'utf8');
-    for (const [tag] of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g)) assert.match(tag, /rel="noopener noreferrer"/);
+    for (const [tag] of html.matchAll(/<a\b[^>]*target="_blank"[^>]*>/g))
+      assert.match(tag, /rel="noopener noreferrer"/);
     for (const [tag] of html.matchAll(/<img\b[^>]*>/g)) {
       assert.match(tag, /alt="[^"]+"/);
       assert.match(tag, /width="\d+"/);
@@ -68,7 +76,12 @@ test('PC Dashboard leads both languages and offers a Windows download without en
     const home = readFileSync(path.join(root, `index${suffix}.html`), 'utf8');
     const projects = readFileSync(path.join(root, `projects${suffix}.html`), 'utf8');
     const demos = readFileSync(path.join(root, `demos${suffix}.html`), 'utf8');
-    assert.match(home, new RegExp(`class="hero-experiment hero-dashboard"\\s+href="projects${suffix}\\.html#pc-dashboard"`));
+    assert.match(
+      home,
+      new RegExp(
+        `class="hero-experiment hero-dashboard"\\s+href="projects${suffix}\\.html#pc-dashboard"`,
+      ),
+    );
     assert.ok(home.indexOf('visual-pc-dashboard') < home.indexOf('visual-tetris'));
     assert.ok(projects.indexOf('id="pc-dashboard"') < projects.indexOf('id="tetris"'));
     assert.match(projects, /releases\/latest\/download\/PC-Dashboard\.exe/);
@@ -77,7 +90,10 @@ test('PC Dashboard leads both languages and offers a Windows download without en
 });
 
 test('notes connect public project evidence and retain localized articles', () => {
-  for (const [suffix, title] of [['', 'A bug fix needs a counterexample.'], ['-de', 'Ein Bugfix braucht ein Gegenbeispiel.']]) {
+  for (const [suffix, title] of [
+    ['', 'A bug fix needs a counterexample.'],
+    ['-de', 'Ein Bugfix braucht ein Gegenbeispiel.'],
+  ]) {
     const html = readFileSync(path.join(root, `blog${suffix}.html`), 'utf8');
     assert.equal((html.match(/class="journal-article"/g) || []).length, 5);
     assert.ok(html.includes(title));
@@ -87,7 +103,10 @@ test('notes connect public project evidence and retain localized articles', () =
 });
 
 test('early course work is linked as prototypes and internship notes are present', () => {
-  for (const [suffix, internshipText] of [['', 'During my internship'], ['-de', 'Während meines Praktikums']]) {
+  for (const [suffix, internshipText] of [
+    ['', 'During my internship'],
+    ['-de', 'Während meines Praktikums'],
+  ]) {
     const projects = readFileSync(path.join(root, `projects${suffix}.html`), 'utf8');
     const blog = readFileSync(path.join(root, `blog${suffix}.html`), 'utf8');
     const home = readFileSync(path.join(root, `index${suffix}.html`), 'utf8');
@@ -96,5 +115,40 @@ test('early course work is linked as prototypes and internship notes are present
     assert.match(projects, /Expectimax/);
     assert.equal(blog.split(internshipText).length - 1, 2);
     assert.match(home, suffix ? /Im Praktikum habe ich/ : /During my internship/);
+  }
+});
+
+test('the private framework is discoverable in both languages and has no source or presentation download', () => {
+  const chapters = [
+    'context',
+    'engineering',
+    'ui-director',
+    'security',
+    'documentation',
+    'agent-workflow',
+    'exam-projects',
+    'agents-md',
+    'collaboration',
+    'conclusion',
+  ];
+  for (const suffix of ['', '-de']) {
+    const home = readFileSync(path.join(root, `index${suffix}.html`), 'utf8');
+    const projects = readFileSync(path.join(root, `projects${suffix}.html`), 'utf8');
+    const framework = readFileSync(path.join(root, `framework${suffix}.html`), 'utf8');
+    const demos = readFileSync(path.join(root, `demos${suffix}.html`), 'utf8');
+    assert.ok(home.includes(`href="framework${suffix}.html"`));
+    assert.ok(projects.includes('id="ai-skills"'));
+    assert.ok(projects.includes(`href="framework${suffix}.html"`));
+    assert.doesNotMatch(demos, /visual-ai-skills/);
+    assert.doesNotMatch(projects, /Arrantix\/(?:undefined|ai-skills)/);
+    for (const chapter of chapters) {
+      assert.ok(framework.includes(`id="${chapter}"`), `${suffix}: missing ${chapter}`);
+      assert.ok(framework.includes(`href="#${chapter}"`), `${suffix}: missing link ${chapter}`);
+    }
+    assert.doesNotMatch(framework, /<pre\b|<code\b|download\s*=/i);
+    assert.doesNotMatch(
+      framework,
+      /file:|C:\\|\.codex[\\/]|SKILL\.md|context\.ps1|-Command\s+query|\.pdf(?:[#?"])/i,
+    );
   }
 });

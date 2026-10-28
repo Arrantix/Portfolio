@@ -130,7 +130,7 @@
 .field textarea:focus-visible {
   outline-offset: 3px;
 }
-.field [aria-invalid="true"] {
+.field [aria-invalid='true'] {
   border-color: var(--error);
 }
 .captcha-field input {
@@ -157,7 +157,7 @@
   margin-block: 16px;
   overflow-wrap: anywhere;
 }
-.form-status[data-state="error"] {
+.form-status[data-state='error'] {
   color: var(--error);
 }
 .form-notice {

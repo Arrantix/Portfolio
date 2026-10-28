@@ -17,6 +17,7 @@ The project and playground pages are available in both languages.
 ## Edit
 
 - `scripts/build.mjs`: bilingual page content and shared HTML templates.
+- `scripts/framework.mjs`: public German and English analysis of the skill framework.
 - `styles.css`: design tokens, typography, layouts, and responsive states.
 - `contact.css`: contact layout and form styles.
 - `scripts.js`: progressively enhanced mobile navigation and language anchors.
@@ -26,8 +27,21 @@ The project and playground pages are available in both languages.
 After changing page content or templates, regenerate the committed HTML:
 
 ```sh
+npm ci --ignore-scripts
 node scripts/build.mjs
 ```
+
+The build formats generated HTML with the same Prettier configuration as the
+source files. Keep both templates and generated pages readable: use nested
+indentation, multiline CSS declarations, and structured HTML templates.
+
+```sh
+npm run format
+npm run format:check
+```
+
+Run the format check after generating pages and before committing. The
+`.editorconfig` file defines two-space indentation and LF line endings for editors.
 
 No npm install or build service is needed to view or publish the site. Navigation,
 projects, notes, language links, and direct email links work without JavaScript.
@@ -65,7 +79,7 @@ npm run test:browser
 
 Start the local preview first. `PORTFOLIO_PREVIEW_URL` can select another local
 port; `PORTFOLIO_BROWSER` can point to an existing Chrome/Chromium executable.
-The browser tests cover all ten pages at 320, 390, 768, and 1440 pixels, axe
+The browser tests cover all twelve pages at 320, 390, 768, and 1440 pixels, axe
 accessibility checks, keyboard navigation, no-JavaScript fallback, reduced motion,
 and mocked contact success and failure. Screenshots and the report go into the
 ignored `test-results/` directory. No real messages are sent by the tests.
@@ -74,3 +88,19 @@ Before publishing, preview all pages at small, medium, and large widths, check
 keyboard navigation and language switches, and exercise contact success/failure
 with a mocked provider. Local tests must not send real messages. Publishing does
 not establish that the external EmailJS account is currently configured correctly.
+
+## Private framework, public case study
+
+`framework-de.html` and `framework.html` describe Kevin's seven skill modules,
+the role of AGENTS.md, their collaboration, and an assessment of the evidence.
+The pages are linked from the homepage and the project overview.
+
+Keep this case study at the level of purpose, contribution, design trade-offs,
+and demonstrated results. Do not add skill instructions, prompts, internal
+procedures, private source files, context archives, or the original presentation.
+Do not infer general productivity or cost savings from the small context pilot.
+The reported 47.4% uncached-input saving compares functionally correct initial
+runs. Additional README-only runs were triggered by an overly narrow keyword
+check, which failed only in the skill condition despite functional checks passing.
+Attribute that unnecessary work to the acceptance test, rather than to a functional
+defect in the skill. Preserve the complete raw measurements when discussing it.

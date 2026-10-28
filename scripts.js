@@ -27,14 +27,16 @@ if (menuToggle && navigation) {
     setMenu(false);
   }
 
-  menuToggle.addEventListener('click', () => setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'));
-  navigation.addEventListener('keydown', event => {
+  menuToggle.addEventListener('click', () =>
+    setMenu(menuToggle.getAttribute('aria-expanded') !== 'true'),
+  );
+  navigation.addEventListener('keydown', (event) => {
     if (event.key === 'Escape' && mobileViewport.matches) {
       setMenu(false);
       menuToggle.focus();
     }
   });
-  navigation.addEventListener('click', event => {
+  navigation.addEventListener('click', (event) => {
     if (event.target.closest('a') && mobileViewport.matches) setMenu(false);
   });
   mobileViewport.addEventListener('change', syncMenu);
@@ -44,7 +46,7 @@ if (menuToggle && navigation) {
 // Keep anchors on matching language routes, including after in-page navigation.
 function syncLanguageAnchors() {
   const hash = window.location.hash;
-  document.querySelectorAll('.language-switch a').forEach(link => {
+  document.querySelectorAll('.language-switch a').forEach((link) => {
     link.hash = hash && document.getElementById(hash.slice(1)) ? hash : '';
   });
 }

@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI skill framework — Kevin Weidner</title>
+    <meta
+      name="description"
+      content="I’m developing a modular skill framework for my work with a coding agent. It connects technical project knowledge with methods for engineering, design, and quality assurance."
+    />
+    <meta name="theme-color" content="#171a17" />
+    <link rel="canonical" href="https://arrantix.github.io/Portfolio/framework.html" />
+    <link
+      rel="alternate"
+      hreflang="de"
+      href="https://arrantix.github.io/Portfolio/framework-de.html"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://arrantix.github.io/Portfolio/framework.html"
+    />
+    <meta property="og:title" content="AI skill framework — Kevin Weidner" />
+    <meta
+      property="og:description"
+      content="I’m developing a modular skill framework for my work with a coding agent. It connects technical project knowledge with methods for engineering, design, and quality assurance."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/SpaceGrotesk-Variable.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="scripts.js" defer></script>
+  </head>
+  <body class="page-framework">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="shell header-inner">
+        <a class="brand" href="index.html" aria-label="Kevin Weidner — Home">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M0 0h10v10H0zm12 0h10v10H12zm0 12h10v10H12z" />
+          </svg>
+
+          <span>
+            Kevin Weidner
+            <span class="brand-alias">/ Arrantix</span>
+          </span>
+        </a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-open-label="Menu"
+          data-close-label="Close"
+          hidden
+        >
+          Menu
+          <span aria-hidden="true">＋</span>
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Main navigation">
+          <a href="projects.html"> Projects </a>
+          <a href="index.html#about">About</a>
+          <a href="blog.html"> Notes </a>
+          <a class="nav-contact" href="contact.html">
+            Contact
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <div class="language-switch" aria-label="Language">
+            <a href="framework-de.html" lang="de" hreflang="de" aria-label="Deutsch"> DE </a>
+            <span aria-hidden="true">/</span>
+            <a
+              href="framework.html"
+              lang="en"
+              hreflang="en"
+              aria-label="English"
+              aria-current="true"
+            >
+              EN
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="page-intro shell">
+        <p class="eyebrow">Case study / My AI tools</p>
+        <h1>AI work needs<br /><span>a clear framework.</span></h1>
+        <p class="page-intro-text">
+          I’m developing a modular skill framework for my work with a coding agent. It connects
+          technical project knowledge with methods for engineering, design, and quality assurance.
+        </p>
+      </div>
+
+      <div class="shell framework-summary">
+        <p class="mono framework-scope">
+          7 specialist modules · private implementation · Analysis: October 2026
+        </p>
+        <div class="framework-contribution">
+          <h2>My contribution</h2>
+          <p>
+            Designing the modules, defining their specialist roles and connections, and implementing
+            the project-context tool in PowerShell. The work also includes behavior tests and a
+            technical presentation about the context skill.
+          </p>
+        </div>
+
+        <div
+          class="project-visual visual-ai-skills framework-overview"
+          role="img"
+          aria-label="Concept overview of seven skills: project context, engineering, UI Director, security, documentation, agent workflow, and examination projects. AGENTS.md provides their shared working foundation."
+        >
+          <div class="framework-diagram" aria-hidden="true">
+            <span class="framework-context mono">Project context</span>
+            <span class="framework-diagram-title">AI work,<br />with structure.</span>
+            <div class="framework-domains">
+              <span>Engineering</span><span>UI Director</span><span>Security</span
+              ><span>Documentation</span><span>Agent workflow</span><span>Exam projects</span>
+            </div>
+            <span class="framework-base mono">AGENTS.md / shared foundation</span>
+          </div>
+        </div>
+      </div>
+      <div class="shell journal framework-journal">
+        <nav class="journal-index" aria-label="In this case study">
+          <a href="#context">
+            <span class="mono">01</span>
+            Project context
+          </a>
+
+          <a href="#engineering">
+            <span class="mono">02</span>
+            Software engineering
+          </a>
+
+          <a href="#ui-director">
+            <span class="mono">03</span>
+            UI Director
+          </a>
+
+          <a href="#security">
+            <span class="mono">04</span>
+            Security
+          </a>
+
+          <a href="#documentation">
+            <span class="mono">05</span>
+            Documentation
+          </a>
+
+          <a href="#agent-workflow">
+            <span class="mono">06</span>
+            Agent workflow
+          </a>
+
+          <a href="#exam-projects">
+            <span class="mono">07</span>
+            Examination projects
+          </a>
+
+          <a href="#agents-md">
+            <span class="mono">08</span>
+            AGENTS.md
+          </a>
+
+          <a href="#collaboration">
+            <span class="mono">09</span>
+            Working together
+          </a>
+
+          <a href="#conclusion">
+            <span class="mono">10</span>
+            Conclusion
+          </a>
+        </nav>
+        <div class="journal-articles">
+          <article class="journal-article framework-article" id="context">
+            <p class="eyebrow">01 / Project context</p>
+            <h2>Keeping technical reasoning useful beyond one session.</h2>
+            <p class="framework-lead">
+              Code records what was built. It does not always explain why a particular solution was
+              chosen.
+            </p>
+            <p>
+              I developed the context skill to bridge that gap in ongoing project work. It makes
+              relevant findings available for later tasks. Its main value concerns the reasoning
+              behind decisions and unusual constraints that would otherwise need to be investigated
+              again.
+            </p>
+            <p>
+              This module has a PowerShell implementation alongside its working guidance. The
+              version checked in October 2026 passed 40 isolated behavior tests. My presentation
+              about the context skill also examines a small pilot comparison and states its
+              limitations.
+            </p>
+            <p>
+              The documented pilot covers three task pairs. Initial runs with the context skill
+              processed 47.4% fewer uncached input tokens: 55,542 rather than 105,623. This is a
+              measured saving for those tasks and that phase.
+            </p>
+            <p>
+              The initial runs met the functional task; all functional checks passed. An overly
+              narrow README keyword check triggered additional revisions in only two skill runs.
+              Both variants faced the same check, but it required wording that the initial task had
+              not explicitly requested. The revisions changed only the README and were unnecessary
+              for the functional solution.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                The 47.4% compares functionally correct initial runs. I attribute the unnecessary
+                extra work to the README test. It remains in the raw data: including those
+                additional runs, uncached input was 4.3% higher. That total therefore does not
+                demonstrate functionally necessary rework caused by the skill.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="engineering">
+            <p class="eyebrow">02 / Software engineering</p>
+            <h2>Making quality depend on the actual engineering task.</h2>
+            <p class="framework-lead">
+              A small correction and a change across several components need different levels of
+              verification.
+            </p>
+            <p>
+              I developed the engineering skill to guide architecture, implementation, testing, and
+              review decisions. It focuses on choosing an approach that fits the change and
+              identifying evidence that can demonstrate the result.
+            </p>
+            <p>
+              The module connects two concerns: designing understandable code and considering the
+              consequences of a change. That connection matters when extending an existing project,
+              where a local improvement can affect other features.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                The value lies in an appropriate depth of verification. Too little can miss
+                consequences; too much general process burdens small tasks. Guidance needs to fit
+                the impact of the change.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="ui-director">
+            <p class="eyebrow">03 / UI Director</p>
+            <h2>Designing interfaces with a recognizable purpose.</h2>
+            <p class="framework-lead">
+              An interface has to bring content, interaction, and visual identity together.
+            </p>
+            <p>
+              I developed the UI Director to support this design work. It focuses attention on
+              connected decisions: Which information comes first? How does a layout handle long
+              text? What roles do typography, spacing, and interaction play?
+            </p>
+            <p>
+              This portfolio is a concrete application. Project visuals, quiet surfaces, and a
+              restrained accent color give the work room. German and English content and small
+              screens reveal whether those decisions hold up with real material.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                A recognizable design comes from decisions that work together. A skill can structure
+                that work; the result still needs to be rendered, used, and assessed visually.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="security">
+            <p class="eyebrow">04 / Security</p>
+            <h2>Considering failure while designing the feature.</h2>
+            <p class="framework-lead">
+              For data, permissions, and external input, behavior under failure also determines
+              quality.
+            </p>
+            <p>
+              The security module adds a perspective on incorrect assumptions and unwanted use to
+              functional development. It gives security a place in technical decisions before a
+              feature is considered complete.
+            </p>
+            <p>
+              My contribution is establishing that perspective as a distinct specialist role in the
+              framework. A working interface answers different questions from a review of how
+              sensitive information is handled. Both perspectives need to address the same product.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                A stated security objective is not evidence of security. The module replaces neither
+                independent review nor the technical enforcement of protective measures.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="documentation">
+            <p class="eyebrow">05 / Documentation</p>
+            <h2>Making technical work understandable to other people.</h2>
+            <p class="framework-lead">
+              An explanation is useful when its readers can understand, assess, or carry out
+              something with it.
+            </p>
+            <p>
+              I developed the documentation module to connect technical work with its readers. A
+              guide, a project description, and a technical assessment need different emphases, even
+              when they describe the same product.
+            </p>
+            <p>
+              Within the framework, it complements implementation and verification with an
+              understandable account of the actual state. The context presentation and this case
+              study are examples: they explain my contribution and assess results without treating
+              an idea as a proven effect.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                Clear language and technical accuracy belong together. Good wording cannot replace
+                missing evidence; technical detail alone does not make an explanation useful.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="agent-workflow">
+            <p class="eyebrow">06 / Agent workflow</p>
+            <h2>Designing the collaboration with the coding agent.</h2>
+            <p class="framework-lead">
+              How an agent approaches a development task also requires deliberate decisions.
+            </p>
+            <p>
+              This module considers the agent’s working process: understanding the task, using
+              tools, checking results, and providing a useful handover. I developed it to complement
+              the specialist skills because a sound technical objective does not define the entire
+              way of reaching it.
+            </p>
+            <p>
+              Its distinction from engineering matters. Engineering mainly considers the software
+              and its consequences. The agent module considers how AI works on that software and how
+              I can assess its progress and results.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                More instructions do not automatically make an agent more reliable. This module
+                needs to stay aligned with the working environment and support real tasks without
+                creating unnecessary bureaucracy.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="exam-projects">
+            <p class="eyebrow">07 / Examination projects</p>
+            <h2>Adapting general methods to a specialist context.</h2>
+            <p class="framework-lead">
+              An examination project has different expectations for traceability and individual
+              contribution from an ordinary project note.
+            </p>
+            <p>
+              I developed a specialist module for application-development examination projects at
+              IHK Erfurt in Germany. It connects technical project work with preparation for the
+              application, documentation, presentation, and technical discussion.
+            </p>
+            <p>
+              This skill shows another aspect of the framework: specialist guidance can extend
+              general methods without burdening every task with exceptional cases. The candidate’s
+              actual work still needs to be described clearly and supported by evidence.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                This specialization has a limited scope. It replaces neither current official
+                requirements, the candidate’s own examination work, nor approval by the responsible
+                body.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="agents-md">
+            <p class="eyebrow">08 / AGENTS.md</p>
+            <h2>A shared foundation for different tasks.</h2>
+            <p class="framework-lead">
+              The specialist modules need a consistent foundation that remains understandable across
+              projects.
+            </p>
+            <p>
+              My AGENTS.md records expectations for the collaboration. Its role in the design is to
+              keep shared principles separate from the depth of individual skills. Project-specific
+              guidance complements that foundation where needed.
+            </p>
+            <p>
+              Its responsibility differs from the context skill. AGENTS.md describes expectations
+              for the work; project context adds knowledge about earlier technical decisions. That
+              distinction clarifies the role of each piece of information and makes it easier to
+              maintain.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                A growing foundation file can itself become a source of mistakes. Conflicts,
+                repetition, and outdated guidance need review. Its quality depends on clarity and
+                relevance to the work.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="collaboration">
+            <p class="eyebrow">09 / Working together</p>
+            <h2>Examining one change from several specialist perspectives.</h2>
+            <p class="framework-lead">
+              An ordinary product change makes the relationship tangible: keeping a form
+              understandable and usable after an error.
+            </p>
+            <p>
+              The UI perspective considers feedback and usability. Engineering examines the state
+              change and its tests. Security considers sensitive inputs. Documentation explains
+              observable behavior. The agent module concerns how the task is approached; existing
+              project context can add reasoning from earlier decisions.
+            </p>
+            <p>
+              The shared foundation frames the collaboration. The examination module applies when
+              the project falls within that specialist context. This example describes complementary
+              perspectives, rather than an automatically executed chain: selecting and reconciling
+              contributions remains part of working with the agent.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                The strength lies in complementary perspectives on the same task. Overlap is useful
+                while responsibilities remain clear. An additional perspective needs to contribute
+                something to the actual task.
+              </p>
+            </aside>
+          </article>
+
+          <article class="journal-article framework-article" id="conclusion">
+            <p class="eyebrow">10 / Conclusion</p>
+            <h2>My result: a reasoned framework for AI-assisted development.</h2>
+            <p class="framework-lead">
+              The framework shows my work on technical methods, their implementation, and their
+              connection to real projects.
+            </p>
+            <p>
+              The context module is particularly tangible through its implementation, behavior
+              tests, and presentation. The other skills contribute specialist perspectives;
+              AGENTS.md connects them to a shared foundation. This portfolio provides a concrete
+              application of the UI Director.
+            </p>
+            <p>
+              The pilot demonstrates a concrete initial-run advantage. Further use should examine
+              how that advantage transfers to other tasks and longer sequences of work. Such
+              comparisons need clearly defined acceptance criteria, context maintenance effort, and
+              genuinely necessary functional corrections.
+            </p>
+            <aside class="framework-assessment" aria-label="My assessment">
+              <p class="eyebrow">My assessment</p>
+              <p>
+                My aim is understandable, verifiable development with AI. The existing artifacts
+                demonstrate the design and specific functions. They do not establish a general
+                productivity gain or autonomous quality assurance.
+              </p>
+            </aside>
+          </article>
+        </div>
+      </div>
+
+      <section class="contact-cta shell" id="contact" aria-labelledby="contact-heading">
+        <div>
+          <p class="eyebrow">A good place to start</p>
+          <h2 id="contact-heading">Have an idea?<br /><span>Tell me about it.</span></h2>
+        </div>
+        <a class="contact-circle" href="contact.html" aria-label="Contact">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </a>
+        <div class="cta-bottom">
+          <a class="email-link" href="mailto:weidner.k@protonmail.com">weidner.k@protonmail.com</a>
+          <span class="mono">Germany · DE / EN</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <a class="footer-brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M0 0h10v10H0zm12 0h10v10H12zm0 12h10v10H12z" />
+          </svg>
+          Kevin Weidner</a
+        >
+        <p>Made with curiosity.</p>
+        <div class="footer-links">
+          <a
+            class="text-link"
+            href="https://github.com/Arrantix"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" />
+            </svg> </a
+          ><a
+            class="text-link"
+            href="https://www.linkedin.com/in/kevin-weidner-266561329/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </a>
+          <a class="text-link" href="#top">
+            Back to top
+            <span aria-hidden="true">↑</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
